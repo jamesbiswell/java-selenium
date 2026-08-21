@@ -1,0 +1,5 @@
+139.0.7258.139
+
+https://storage.googleapis.com/chrome-for-testing-public/139.0.7258.139/mac-arm64/chromedriver-mac-arm64.zip
+
+xattr -d com.apple.quarantine /Users/luv2code/IdeaProjects/java-selenium-testng/src/main/resources/chromedriver
