@@ -18,7 +18,7 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
 
 //        // set path to chrome driver binary
-//        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+//        // System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
 
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -33,7 +33,7 @@ public class BaseTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         // apply a red border around the element
         js.executeScript("arguments[0].style.border='3px solid red';", element);
-//        js.executeScript("arguments[0].style.border='3px solid red'; " +
+//        js.executeScript("arguments[0].style.border='3px solid green'; " +
 //                "arguments[0].style.backgroundColor='yellow'", element);
 
 
