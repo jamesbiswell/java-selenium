@@ -1,0 +1,31 @@
+package org.luv2code.O6_options_cookies_browser;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.Test;
+
+public class LaunchSafariTest {
+    @Test
+    public void launchSafariTest () throws InterruptedException {
+
+        // initialize SafariDriver (no WebDriver manager needed)
+        WebDriver driver = new SafariDriver();
+
+        // maximize the window
+        driver.manage().window().maximize();
+
+        // launch the luv2test site
+        driver.get("https://luv2test.com/");
+
+        // verify home page heading
+        driver.findElement(By.xpath("//h1['Luv2Code Automation Practice (Web and Mobile Web)']"));
+        System.out.println("page title: " + driver.getTitle());
+
+        Thread.sleep(5000);
+
+        // quit firefox browser
+        driver.quit();
+
+    }
+}
