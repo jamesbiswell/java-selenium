@@ -54,6 +54,6 @@ public class BaseTest {
     @AfterMethod
     public void tearDown() {
         // close the browser
-//        driver.quit();
+        driver.quit();
     }
 }
