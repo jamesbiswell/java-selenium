@@ -14,7 +14,7 @@ public class XpathOnlyTest extends BaseTest {
         // 1. Navigate up the DOM (Parent Axis)
         driver.findElement(By.xpath("//input[@id='fullName']/parent::div/../label"));
 
-        // 2. Navigate to Ancestors (grandparents, etc)
+        // 2. Navigate to Ancestors (grandparents etc)
         driver.findElement(By.xpath("//input[@id='fullName']/ancestor::form"));
 
         // 3. Select Based on Text Content
@@ -48,8 +48,6 @@ public class XpathOnlyTest extends BaseTest {
         driver.findElement(By.xpath("//label/following-sibling::label"));
         
         driver.findElement(By.xpath("//label/preceding-sibling::label"));
-        
-        driver.findElement(By.xpath("//label/following::input"));
         
         driver.findElement(By.xpath("//label/following::input"));
         
