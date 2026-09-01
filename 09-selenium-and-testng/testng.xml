@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite1" verbose="1">
+    <test name="Regression1">
+        <classes>
+            <class name="org.luv2code.O4_actions.AuthenticationFormTest"/>
+            <class name="org.luv2code.O4_actions.DragAndDropTest"/>
+            <class name="org.luv2code.O4_actions.HandlingDropdownsTest"/>
+        </classes>
+    </test>
+</suite>
