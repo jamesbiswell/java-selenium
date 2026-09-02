@@ -9,21 +9,32 @@
 <!--    </test>-->
 <!--</suite>-->
 
-<suite name="Suite">
-    <test name="LoginTest1">
-        <parameter name="username" value="admin"/>
-        <parameter name="password" value="admin"/>
-        <classes>
-            <class name="org.luv2code.O9_testng.ParameterizedTestngTest"/>
-            <class name="org.luv2code.O9_testng.ParameterizedAuthenticationFormTest"/>
-        </classes>
-    </test>
-    <test name="LoginTest2">
-        <parameter name="username" value="user"/>
-        <parameter name="password" value="pass"/>
-        <classes>
-            <class name="org.luv2code.O9_testng.ParameterizedTestngTest"/>
-            <class name="org.luv2code.O9_testng.ParameterizedAuthenticationFormTest"/>
-        </classes>
-    </test>
+<!--<suite name="Suite">-->
+<!--    <test name="LoginTest1">-->
+<!--        <parameter name="username" value="admin"/>-->
+<!--        <parameter name="password" value="admin"/>-->
+<!--        <classes>-->
+<!--            <class name="org.luv2code.O9_testng.ParameterizedTestngTest"/>-->
+<!--            <class name="org.luv2code.O9_testng.ParameterizedAuthenticationFormTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="LoginTest2">-->
+<!--        <parameter name="username" value="user"/>-->
+<!--        <parameter name="password" value="pass"/>-->
+<!--        <classes>-->
+<!--            <class name="org.luv2code.O9_testng.ParameterizedTestngTest"/>-->
+<!--            <class name="org.luv2code.O9_testng.ParameterizedAuthenticationFormTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+
+<suite name="ListenerSuite">
+<listeners>
+    <listener class-name="org.luv2code.O9_testng.MyTestListener"/>
+</listeners>
+<test name="ListenerTest">
+    <classes>
+        <class name="org.luv2code.O9_testng.ListenerTest"/>
+    </classes>
+</test>
 </suite>
