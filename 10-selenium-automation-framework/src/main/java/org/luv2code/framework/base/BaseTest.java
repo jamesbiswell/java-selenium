@@ -3,6 +3,7 @@ package org.luv2code.framework.base;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.luv2code.framework.constants.TestDataConstant;
 import org.luv2code.framework.utils.ConfigUtil;
+import org.luv2code.framework.utils.WaitTimeUtil;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,7 +35,7 @@ public class BaseTest {
             driver = new FirefoxDriver();
         }
         
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitTimeUtil.MEDIUM.getSeconds()));
         driver.manage().window().maximize();
 
         // navigate to Luv2Test site

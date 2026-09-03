@@ -5,6 +5,7 @@ import org.luv2code.framework.constants.TestDataConstant;
 import org.luv2code.framework.listeners.MyListener;
 import org.luv2code.framework.pages.AuthenticationPage;
 import org.luv2code.framework.pages.HomePage;
+import org.luv2code.framework.utils.WaitTimeUtil;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -36,16 +37,16 @@ public class AuthenticationTest extends BaseTest {
 
         // Check presence of "Login Successful" heading
         authenticationPage.checkPresenceOfLoginSuccessMessage();
-        waitInSeconds(2);
+        waitInSeconds(WaitTimeUtil.SHORT_TWO.getSeconds());
 
         // click on "Logout" button
         authenticationPage.clickOnLogoutButton();
-        waitInSeconds(2);
+        waitInSeconds(WaitTimeUtil.SHORT_TWO.getSeconds());
 
         // Check presence of "Welcome!" heading
         authenticationPage.checkPresenceOfWelcomeHeading();
         Assert.assertEquals(authenticationPage.getHeadingText(), "Authentication");
-        waitInSeconds(2);
+        waitInSeconds(WaitTimeUtil.SHORT_ONE.getSeconds());
 
     }
 }
