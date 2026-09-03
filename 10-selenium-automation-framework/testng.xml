@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--<suite name="Suite1" verbose="1">-->
+<!--    <test name="Regression1">-->
+<!--        <classes>-->
+<!--            <class name="org.luv2code.O4_actions.AuthenticationFormTest"/>-->
+<!--            <class name="org.luv2code.O4_actions.DragAndDropTest"/>-->
+<!--            <class name="org.luv2code.O4_actions.HandlingDropdownsTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+
+<!--<suite name="Suite">-->
+<!--    <test name="LoginTest1">-->
+<!--        <parameter name="username" value="admin"/>-->
+<!--        <parameter name="password" value="admin"/>-->
+<!--        <classes>-->
+<!--            <class name="org.luv2code.O9_testng.ParameterizedTestngTest"/>-->
+<!--            <class name="org.luv2code.O9_testng.ParameterizedAuthenticationFormTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="LoginTest2">-->
+<!--        <parameter name="username" value="user"/>-->
+<!--        <parameter name="password" value="pass"/>-->
+<!--        <classes>-->
+<!--            <class name="org.luv2code.O9_testng.ParameterizedTestngTest"/>-->
+<!--            <class name="org.luv2code.O9_testng.ParameterizedAuthenticationFormTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+
+<suite name="ListenerSuite">
+<listeners>
+    <listener class-name="org.luv2code.framework.listeners.MyListener"/>
+</listeners>
+<test name="ListenerTest">
+    <classes>
+        <class name="org.luv2code.O10_framework_tests.AuthenticationTest"/>
+    </classes>
+</test>
+</suite>

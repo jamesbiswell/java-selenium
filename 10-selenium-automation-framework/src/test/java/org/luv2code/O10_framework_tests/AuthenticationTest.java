@@ -1,11 +1,15 @@
 package org.luv2code.O10_framework_tests;
 
 import org.luv2code.framework.base.BaseTest;
+import org.luv2code.framework.constants.TestDataConstant;
+import org.luv2code.framework.listeners.MyListener;
 import org.luv2code.framework.pages.AuthenticationPage;
 import org.luv2code.framework.pages.HomePage;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(MyListener.class)
 public class AuthenticationTest extends BaseTest {
     @Test
     public void authenticationTest() {
@@ -28,7 +32,7 @@ public class AuthenticationTest extends BaseTest {
         authenticationPage.checkPresenceOfWelcomeHeading();
 
         // login
-        authenticationPage.login("admin", "admin");
+        authenticationPage.login(TestDataConstant.ADMIN_USERNAME, TestDataConstant.ADMIN_PASSWORD);
 
         // Check presence of "Login Successful" heading
         authenticationPage.checkPresenceOfLoginSuccessMessage();
