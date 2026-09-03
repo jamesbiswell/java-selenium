@@ -1,14 +1,10 @@
 package org.luv2code.framework.base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.luv2code.framework.constants.TestDataConstant;
-import org.luv2code.framework.utils.ConfigUtil;
-import org.luv2code.framework.utils.WaitTimeUtil;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -27,19 +23,13 @@ public class BaseTest {
             seleniumLogger.setLevel(Level.OFF);
         }
         // open a browser using selenium
-        if(ConfigUtil.getProperty("browser").equals("chrome")) {
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-        } else if (ConfigUtil.getProperty("browser").equals("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
-        }
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitTimeUtil.MEDIUM.getSeconds()));
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
 
         // navigate to Luv2Test site
-        driver.get(TestDataConstant.BASE_URL);
+        driver.get("https://www.luv2test.com");
         System.out.println("\nPage Title: " + driver.getTitle());
     }
 
